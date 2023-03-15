@@ -81,9 +81,9 @@ function networksWithStatus(
 ): Observable<NetworkModel>[] {
   let maps$: Observable<NetworkModelWithStatus>[] = withConnections(models);
 
-  // models.forEach((network)=>{
-  //   maps$ = withConnections(network);
-  // })
+  models.forEach((network) => {
+    maps$ = withConnections(network);
+  });
 }
 function withConnections(
   models: NetworkModel[]
